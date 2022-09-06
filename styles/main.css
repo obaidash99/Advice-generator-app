@@ -19,7 +19,7 @@ body {
 	font-family: 'Manrope', sans-serif;
 	background-color: var(--dark-blue);
 }
-.card {
+.container {
 	width: 500px;
 	position: absolute;
 	top: 50%;
@@ -30,8 +30,15 @@ body {
 	border-radius: 15px;
 	padding: 20px;
 }
+@media (max-width: 767px) {
+	.container {
+		max-width: 90%;
+	}
+}
+.card {
+	position: relative;
+}
 .card .content {
-	margin-bottom: 20px;
 	padding-top: 20px;
 }
 .card .advice-head {
@@ -47,4 +54,27 @@ body {
 	font-size: 28px;
 	line-height: 1.5;
 	font-weight: bold;
+}
+.card .divider {
+	width: 90%;
+	margin: 30px auto 50px;
+}
+.divider img {
+	width: 100%;
+}
+.dice {
+	width: 60px;
+	height: 60px;
+	background-color: var(--neon-green);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	transform: translate(-47%, -15%);
+}
+.dice img {
+	width: 30px;
 }
