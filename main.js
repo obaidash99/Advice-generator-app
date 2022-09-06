@@ -9,7 +9,7 @@ dice.addEventListener('click', () => {
 });
 
 function getAdvice() {
-	fetch(' https://api.adviceslip.com/advice')
+	fetch(' https://api.adviceslip.com/advice', { cache: 'no-cache' })
 		.then((response) => {
 			return response.json();
 		})
